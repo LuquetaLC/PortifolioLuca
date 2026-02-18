@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 header{
     background: #0f172a; 
     color: #fff;
@@ -5,51 +11,58 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 0 20px;
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
-.logo{
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #fdfdff;
 }
 
 header nav{
     display: flex;
     align-items: center;
-    gap: 40px;
 }
 
-header nav a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
+.nav-links{
+    display: flex;
+    gap: 30px;
+}
+
+
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links a{
     position: relative;
-    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
-header nav a::after{
+.nav-links a::after{
     content: "";
     position: absolute;
+    left: 0;
+    bottom: 0;
     width: 0%;
     height: 2px;
     background: #7079f0;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
+    transition: width 0.3s ease;
 }
 
-header nav a:hover{
+
+.nav-links a:hover{
     color: #7079f0;
 }
 
-header nav a:hover::after{
+.nav-links a:hover::after{
     width: 100%;
 }
 
@@ -57,6 +70,7 @@ body{
    font-family: 'Poppins', sans-serif;
    padding-top: 80px;
    background: #0b1120; 
+   overflow-x: hidden;
 }
 .tech-slider{
     background: #0f172a;
@@ -250,26 +264,22 @@ body{
     display: none;
     font-size: 28px;
     cursor: pointer;
+    color: white;
 }
 
 /* MOBILE */
 @media (max-width: 768px){
 
-    header{
-        padding: 0 20px;
-    }
-
     .nav-links{
+        display: none;
         position: absolute;
         top: 80px;
-        right: 0;
-        background: #0f172a;
+        left: 0;
         width: 100%;
+        background: #0f172a;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
         padding: 30px 0;
-        display: none;
     }
 
     .nav-links.active{
@@ -278,10 +288,5 @@ body{
 
     .menu-toggle{
         display: block;
-        color: white;
-    }
-
-    header nav{
-        gap: 0;
     }
 }
