@@ -24,6 +24,11 @@
                 <i class="bi bi-envelope"></i>
             </div>
         </button>
+
+        <div class="menu-toggle" id="menu-toggle">
+    ☰
+</div>
+
   
         </nav>
     </header>
@@ -42,6 +47,16 @@
             allowfullscreen>
         </iframe>
     </div>
+
+    <script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+</script>
+
 
 </body>
 </html>
