@@ -143,6 +143,15 @@ body{
 
     transition:.35s;
 }
+.skill:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#7079f0;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+
+}
 
 .skills h2{
     font-size: 32px;
