@@ -3,20 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 header{
-    background: #0f172a; 
-    color: #fff;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
     position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1250px;
+
+    padding:18px 40px;
+
+    background: rgba(15,23,42,.55);
+    backdrop-filter: blur(20px);
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:999;
 }
 
 header nav{
