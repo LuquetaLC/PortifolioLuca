@@ -155,21 +155,18 @@ body{
     flex-direction: column;
     gap: 25px;
 }
-.skill:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#7079f0;
-
-    box-shadow:0 20px 40px rgba(0,0,0,.3);
-
+.skill{
+    background: #111827;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.05);
+    transition: .35s;
 }
 
-
-
-.skill{
-    margin-bottom: 30px;
-    text-align: left;
+.skill:hover{
+    transform: translateY(-6px);
+    border-color: #7079f0;
+    box-shadow: 0 15px 35px rgba(112,121,240,.2);
 }
 
 .skill span{
