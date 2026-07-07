@@ -67,10 +67,14 @@ header nav{
 }
 
 body{
-   font-family: 'Poppins', sans-serif;
-   padding-top: 80px;
-   background: #0b1120; 
-   overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px;
+    background:
+    radial-gradient(circle at top right,#4f46e520 0%,transparent 35%),
+    radial-gradient(circle at bottom left,#2563eb15 0%,transparent 35%),
+    #070B14;
+    color: white;
+    overflow-x: hidden;
 }
 .tech-slider{
     background: #0f172a;
