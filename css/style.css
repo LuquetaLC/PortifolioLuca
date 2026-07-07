@@ -134,14 +134,26 @@ body{
     }
 }
 
-.skill{
+.skills{
+    background: #070B14;
+    padding: 100px 20px;
+    color: white;
+}
 
-    background:#111827;
-    padding:20px;
-    border-radius:15px;
-    border:1px solid rgba(255,255,255,.05);
+.skills h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    color: #7079f0;
+    font-weight: 700;
+}
 
-    transition:.35s;
+.skills-container{
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 .skill:hover{
 
@@ -153,16 +165,7 @@ body{
 
 }
 
-.skills h2{
-    font-size: 32px;
-    margin-bottom: 50px;
-    color: #7079f0;
-}
 
-.skills-container{
-    max-width: 700px;
-    margin: auto;
-}
 
 .skill{
     margin-bottom: 30px;
