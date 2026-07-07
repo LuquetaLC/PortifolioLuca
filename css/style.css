@@ -30,7 +30,14 @@ header nav{
     display: flex;
     align-items: center;
 }
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
 
+.logo span{
+    color:#7079f0;
+}
 .nav-links{
     display: flex;
     gap: 30px;
@@ -183,14 +190,11 @@ body{
 }
 
 .home{
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #0b1120, #0f172a);
-    color: white;
-    text-align: center;
-    padding: 0 20px;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
 .home-content{
@@ -198,26 +202,20 @@ body{
 }
 
 .home h1{
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.home h1 span{
-    color: #7079f0;
+    font-size:72px;
+    line-height:1.1;
 }
 
 .home h2{
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: #94a3b8;
+    margin-top:15px;
+    font-size:30px;
 }
 
 .home p{
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #cbd5e1;
+    margin:35px auto;
+    max-width:600px;
+    font-size:18px;
+    color:#94a3b8;
 }
 
 .home-buttons{
