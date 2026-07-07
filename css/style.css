@@ -134,11 +134,14 @@ body{
     }
 }
 
-.skills{
-    background: #0b1120;
-    padding: 100px 20px;
-    color: white;
-    text-align: center;
+.skill{
+
+    background:#111827;
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.35s;
 }
 
 .skills h2{
