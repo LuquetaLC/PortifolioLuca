@@ -7,8 +7,8 @@
     --bg-card: #0f172a;
     --bg-card-hover: #1a2338;
     --text-white: #ffffff;
-    --text-gray: #94a3b8;
-    --text-light: #cbd5e1;
+    --text-gray: #cbd5e1;      
+    --text-light: #e2e8f0;     
     --border-glass: rgba(255, 255, 255, 0.08);
     --radius: 18px;
     --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -38,6 +38,8 @@ body {
     line-height: 1.7;
     min-height: 100vh;
 }
+
+/* ----- HEADER ----- */
 header {
     position: fixed;
     top: 15px;
@@ -68,15 +70,13 @@ header.scrolled {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: -0.5px;
-    background: linear-gradient(135deg, #ffffff 30%, var(--primary-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-white); 
 }
 
 .logo span {
-    -webkit-text-fill-color: var(--primary);
+    color: var(--primary); 
     background: none;
+    -webkit-text-fill-color: var(--primary);
 }
 
 nav {
@@ -94,7 +94,7 @@ nav {
 
 .nav-links a {
     position: relative;
-    color: var(--text-light);
+    color: var(--text-light); 
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -109,20 +109,19 @@ nav {
     bottom: -2px;
     width: 0%;
     height: 2.5px;
-    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    background: var(--primary); 
     border-radius: 10px;
     transition: width var(--transition);
 }
 
 .nav-links a:hover {
-    color: var(--text-white);
+    color: var(--primary); 
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
-/* Menu toggle (mobile) */
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -134,7 +133,9 @@ nav {
 
 .menu-toggle:hover {
     transform: rotate(90deg);
+    color: var(--primary);
 }
+
 
 .home {
     min-height: 85vh;
@@ -166,20 +167,20 @@ nav {
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -1px;
+    color: var(--text-white); 
 }
 
 .home h1 span {
-    background: linear-gradient(135deg, var(--primary), #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary); 
+    background: none;
+    -webkit-text-fill-color: var(--primary);
 }
 
 .home h2 {
     margin-top: 10px;
     font-size: clamp(1.3rem, 4vw, 2.2rem);
     font-weight: 400;
-    color: var(--text-light);
+    color: var(--text-white);
 }
 
 .home h2::after {
@@ -199,11 +200,11 @@ nav {
     margin: 28px auto;
     max-width: 550px;
     font-size: 1.1rem;
-    color: var(--text-gray);
+    color: var(--text-gray); 
     line-height: 1.8;
 }
 
-/* Botões */
+
 .home-buttons {
     display: flex;
     justify-content: center;
@@ -237,7 +238,7 @@ nav {
 .secondary {
     background: transparent;
     color: var(--text-white);
-    border: 2px solid var(--primary);
+    border: 2px solid var(--primary); 
 }
 
 .secondary:hover {
@@ -247,7 +248,7 @@ nav {
     box-shadow: 0 8px 30px var(--primary-glow);
 }
 
-/* ----- SEÇÃO SKILLS (Barras de progresso) ----- */
+/* ----- SKILLS (barras) ----- */
 .skills {
     background: transparent;
     padding: 80px 20px 100px;
@@ -259,11 +260,12 @@ nav {
     font-size: 2.8rem;
     margin-bottom: 50px;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: -1px;
+    color: var(--text-white); 
+}
+
+.skills h2::after {
+    content: " ✦";
+    color: var(--primary);
 }
 
 .skills-container {
@@ -299,7 +301,7 @@ nav {
 
 .skill:hover {
     transform: translateY(-5px);
-    border-color: var(--primary);
+    border-color: var(--primary); 
     box-shadow: 0 15px 35px rgba(112, 121, 240, 0.15);
     background: var(--bg-card-hover);
 }
@@ -313,14 +315,14 @@ nav {
     display: block;
     margin-bottom: 10px;
     font-size: 1.05rem;
-    color: var(--text-light);
+    color: var(--text-white); 
     position: relative;
     z-index: 1;
 }
 
 .skill span i {
     margin-right: 10px;
-    color: var(--primary);
+    color: var(--primary); 
 }
 
 .bar {
@@ -341,7 +343,7 @@ nav {
     box-shadow: 0 0 12px var(--primary-glow);
 }
 
-/* Cores personalizadas para cada skill (opcional) */
+/* Larguras das barras */
 .html { width: 92%; }
 .css { width: 88%; }
 .js { width: 55%; }
@@ -351,6 +353,8 @@ nav {
 @keyframes grow {
     from { width: 0; }
 }
+
+
 .tech-slider {
     background: var(--bg-card);
     padding: 50px 0;
@@ -417,6 +421,7 @@ nav {
     100% { transform: translateX(-50%); }
 }
 
+
 @media (max-width: 768px) {
     header {
         padding: 12px 20px;
@@ -460,11 +465,9 @@ nav {
     .home h1 {
         font-size: 2.8rem;
     }
-
     .home h2 {
         font-size: 1.4rem;
     }
-
     .home p {
         font-size: 1rem;
         padding: 0 10px;
@@ -478,7 +481,6 @@ nav {
     .skills h2 {
         font-size: 2.2rem;
     }
-
     .skill {
         padding: 18px 20px;
     }
@@ -487,16 +489,13 @@ nav {
         width: 140px;
         margin: 0 10px;
     }
-
     .slide i {
         font-size: 44px;
     }
-
     .slider::before,
     .slider::after {
         width: 40px;
     }
-
     .skills-container {
         padding: 0 15px;
     }
@@ -506,27 +505,22 @@ nav {
     .home h1 {
         font-size: 2.2rem;
     }
-
     .home h2 {
         font-size: 1.2rem;
     }
-
     .home-buttons {
         flex-direction: column;
         align-items: center;
     }
-
     .btn {
         width: 100%;
         max-width: 260px;
         text-align: center;
     }
-
     .slide {
         width: 100px;
         margin: 0 8px;
     }
-
     .slide i {
         font-size: 36px;
     }
@@ -536,7 +530,6 @@ nav {
 .Skills {
     display: block;
 }
-
 
 section[id] {
     scroll-margin-top: 90px;
