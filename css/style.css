@@ -39,7 +39,7 @@ body {
     min-height: 100vh;
 }
 
-/* ----- HEADER ----- */
+
 header {
     position: fixed;
     top: 15px;
@@ -343,7 +343,7 @@ nav {
     box-shadow: 0 0 12px var(--primary-glow);
 }
 
-/* Larguras das barras */
+
 .html { width: 92%; }
 .css { width: 88%; }
 .js { width: 55%; }
